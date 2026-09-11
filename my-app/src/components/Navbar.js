@@ -39,9 +39,10 @@ export default function Navbar(props) {
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
           <button className="btn btn-primary" type="submit">Search</button>
           </form> */}
-          <div className={`form-check form-switch text-${props.mode==="light"?"dark":"light"}`}>
-          <input className="form-check-input" type="checkbox" onClick={props.toggleMode} role="switch" id="switchCheckDefault" />
-          <label className="form-check-label" htmlFor="switchCheckDefault">Enable Dark Mode</label>
+          <div className="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button type="button" onClick={props.toggleModeA} className="btn btn-danger mx-2" id="bOne">Enable Dark Mode 1</button>
+          <button type="button" onClick={props.toggleModeB}className="btn btn-warning mx-2" id="bTwo">Enable Dark Mode 2</button>
+          <button type="button" onClick={props.toggleModeC}className="btn btn-success mx-1" id="bThree">Enable Dark Mode 3</button>
           </div>
           </div>
         </div>
