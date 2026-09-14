@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React-Course/tree/main/my-appnpm%20install%20--save%20gh-pages/static/css/main.fe7f8d7e.css",
+    "main.js": "/React-Course/tree/main/my-appnpm%20install%20--save%20gh-pages/static/js/main.af9cc0ca.js",
+    "static/js/453.35732811.chunk.js": "/React-Course/tree/main/my-appnpm%20install%20--save%20gh-pages/static/js/453.35732811.chunk.js",
+    "index.html": "/React-Course/tree/main/my-appnpm%20install%20--save%20gh-pages/index.html",
+    "main.fe7f8d7e.css.map": "/React-Course/tree/main/my-appnpm%20install%20--save%20gh-pages/static/css/main.fe7f8d7e.css.map",
+    "main.af9cc0ca.js.map": "/React-Course/tree/main/my-appnpm%20install%20--save%20gh-pages/static/js/main.af9cc0ca.js.map",
+    "453.35732811.chunk.js.map": "/React-Course/tree/main/my-appnpm%20install%20--save%20gh-pages/static/js/453.35732811.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fe7f8d7e.css",
+    "static/js/main.af9cc0ca.js"
+  ]
+}
