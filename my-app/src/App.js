@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
 import React, {useState} from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 
 function App() {
@@ -98,18 +98,16 @@ function App() {
 
 
 
-  return (
-  <Router>
-    <Navbar title="TextUtils" mode={mode} toggleModeA={toggleModeA} toggleModeB={toggleModeB} toggleModeC={toggleModeC}/>
-    <Alert alert={alert}/>
-    <div className="container my-3">
-      <Routes>
-        <Route exact path="/" element={<TextForm heading="Enter text to analyze" showAlert={showAlert}/>} />
-        <Route exact path="/about" element={<About/>} />
-      </Routes>
-    </div>
-  </Router>
-);
+return (
+  <>
+     <Navbar title="TextUtils" mode={mode} toggleModeA={toggleModeA} toggleModeB={toggleModeB} toggleModeC={toggleModeC}/>
+     <Alert alert={alert}/>
+     <div className="container my-3">
+     <TextForm heading="Enter text to analyze" showAlert={showAlert}/>
+     {/* <About/> */}
+     </div>
+  </>
+)
 }
 
 
