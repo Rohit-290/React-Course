@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/React-Coursen,npm%20install%20--save%20gh-pages/static/css/main.fe7f8d7e.css",
-    "main.js": "/React-Coursen,npm%20install%20--save%20gh-pages/static/js/main.00cb3a22.js",
-    "static/js/453.35732811.chunk.js": "/React-Coursen,npm%20install%20--save%20gh-pages/static/js/453.35732811.chunk.js",
-    "index.html": "/React-Coursen,npm%20install%20--save%20gh-pages/index.html",
-    "main.fe7f8d7e.css.map": "/React-Coursen,npm%20install%20--save%20gh-pages/static/css/main.fe7f8d7e.css.map",
-    "main.00cb3a22.js.map": "/React-Coursen,npm%20install%20--save%20gh-pages/static/js/main.00cb3a22.js.map",
-    "453.35732811.chunk.js.map": "/React-Coursen,npm%20install%20--save%20gh-pages/static/js/453.35732811.chunk.js.map"
+    "main.css": "/React-Course/static/css/main.fe7f8d7e.css",
+    "main.js": "/React-Course/static/js/main.3e4114fd.js",
+    "static/js/453.35732811.chunk.js": "/React-Course/static/js/453.35732811.chunk.js",
+    "index.html": "/React-Course/index.html",
+    "main.fe7f8d7e.css.map": "/React-Course/static/css/main.fe7f8d7e.css.map",
+    "main.3e4114fd.js.map": "/React-Course/static/js/main.3e4114fd.js.map",
+    "453.35732811.chunk.js.map": "/React-Course/static/js/453.35732811.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fe7f8d7e.css",
-    "static/js/main.00cb3a22.js"
+    "static/js/main.3e4114fd.js"
   ]
 }
