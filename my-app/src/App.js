@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
 import React, {useState} from 'react';
-// import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 
 function App() {
@@ -20,10 +20,26 @@ function App() {
       },2500)
     }
 
-
+const [myStyle, setNewStyle] = useState({
+        color: "black",
+        backgroundColor: "white",
+        border: "3px solid black"    
+      })
+       
+        function changeStyle (){
+        setNewStyle({
+        color: "white",
+        backgroundColor: "#096e9c",
+        border: "3px solid black"    
+        })
+      }
+     
   function toggleModeA () {
     if(mode==="light"){
       setMode("dark");
+      changeStyle();
+      let ab = document.querySelector(".ab")
+      ab.style.color = "white";
       document.body.style.backgroundColor = "#30343f"
       let heading = document.querySelector(".h1");
       heading.style.color = "#f8f9fa";
@@ -49,6 +65,9 @@ function App() {
   function toggleModeB () {
     if(mode==="light"){
       setMode("dark");
+      changeStyle();
+      let ab = document.querySelector(".ab")
+      ab.style.color = "white";
       document.body.style.backgroundColor = "#26413c"
       let heading = document.querySelector(".h1");
       heading.style.color = "#f8f9fa";
@@ -74,6 +93,9 @@ function App() {
    function toggleModeC() {
     if(mode==="light"){
       setMode("dark");
+      changeStyle();
+      let ab = document.querySelector(".ab")
+      ab.style.color = "white";
       document.body.style.backgroundColor = "#720026"
       let heading = document.querySelector(".h1");
       heading.style.color = "#f8f9fa";
@@ -99,14 +121,16 @@ function App() {
 
 
 return (
-  <>
-     <Navbar title="TextUtils" mode={mode} toggleModeA={toggleModeA} toggleModeB={toggleModeB} toggleModeC={toggleModeC}/>
-     <Alert alert={alert}/>
-     <div className="container my-3">
-     <TextForm heading="Enter text to analyze" showAlert={showAlert}/>
-     {/* <About/> */}
-     </div>
-  </>
+    <Router>
+    <Navbar title="TextUtils" mode={mode} toggleModeA={toggleModeA} toggleModeB={toggleModeB} toggleModeC={toggleModeC}/>
+    <Alert alert={alert}/>
+    <div className="container my-3">
+      <Routes>
+        <Route exact path="/" element={<TextForm heading="Enter text to analyze" showAlert={showAlert}/>} />
+        <Route exact path="/about" element={<About myStyle={myStyle} changeStyle={changeStyle}/>} />
+      </Routes>
+    </div>
+  </Router>
 )
 }
 

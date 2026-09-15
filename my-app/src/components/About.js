@@ -1,50 +1,26 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-export default function About() {
-    
-     const [myStyle, setNewStyle] = useState({
-        color: "black",
-        backgroundColor: "white"});
-
-    function enableDarkMode () {
-        if(myStyle.color=="black"){
-        setNewStyle({
-        color: "white",
-        backgroundColor: "black",
-        border: "1px solid white"
-        })
-
-        setNewBtnText("Enable Light Mode");
-
-        } else {
-        setNewStyle({
-        color: "black",
-        backgroundColor: "white"
-        })
-        setNewBtnText("Enable Dark Mode");
-        }
-}
-
-      const [myBtnText, setNewBtnText] = useState("Enable Dark Mode") 
-
+export default function About(props) {
 
   return (
-    <div className="container" style= {myStyle}>
-      <h2 className="my-3">About Us</h2>  
+    <div className="container">
+      <h2 className="ab my-3">About Us</h2>  
       <div>
         <div className="accordion accordion-flush" id="accordionFlushExample">
           <div className="accordion-item">
             <h2 className="accordion-header">
               <button
                 className="accordion-button collapsed"
+                id="one"
                 type="button"
-                style= {myStyle}
+                style={props.myStyle}
                 data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseOne"
                 aria-expanded="false"
                 aria-controls="flush-collapseOne"
               >
-                Accordion Item #1
+               <strong>Analyze your text</strong>
               </button>
             </h2>
             <div
@@ -52,10 +28,9 @@ export default function About() {
               className="accordion-collapse collapse"
               data-bs-parent="#accordionFlushExample"
             >
-              <div className="accordion-body">
-                Placeholder content for this accordion, which is intended to
-                demonstrate the <code>.accordion-flush</code> className. This is
-                the first item’s accordion body.
+              <div className="accordion-body" style={props.myStyle} >
+               TextUtils is a simple online tool that instantly converts your text to uppercase or lowercase.
+               It automatically removes extra spaces, making your text clean and professional.
               </div>
             </div>
           </div>
@@ -64,13 +39,14 @@ export default function About() {
               <button
                 className="accordion-button collapsed"
                 type="button"
-                style= {myStyle}
+                id="two"
+                style={props.myStyle}
                 data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseTwo"
                 aria-expanded="false"
                 aria-controls="flush-collapseTwo"
               >
-                Accordion Item #2
+                <strong>Free to use</strong>
               </button>
             </h2>
             <div
@@ -78,11 +54,8 @@ export default function About() {
               className="accordion-collapse collapse"
               data-bs-parent="#accordionFlushExample"
             >
-              <div className="accordion-body">
-                Placeholder content for this accordion, which is intended to
-                demonstrate the <code>.accordion-flush</code> className. This is
-                the second item’s accordion body. Let’s imagine this being
-                filled with some actual content.
+              <div className="accordion-body" style={props.myStyle}>
+                TextUtils is free to use as it has been made for saving time of millions of users around the globe.
               </div>
             </div>
           </div>
@@ -91,13 +64,14 @@ export default function About() {
               <button
                 className="accordion-button collapsed"
                 type="button"
-                style= {myStyle}
+                id="three"
+                style={props.myStyle}
                 data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseThree"
                 aria-expanded="false"
                 aria-controls="flush-collapseThree"
               >
-                Accordion Item #3
+                <strong>Browser compatible</strong>
               </button>
             </h2>
             <div
@@ -105,21 +79,14 @@ export default function About() {
               className="accordion-collapse collapse"
               data-bs-parent="#accordionFlushExample"
             >
-              <div className="accordion-body">
-                Placeholder content for this accordion, which is intended to
-                demonstrate the <code>.accordion-flush</code> className. This is
-                the third item’s accordion body. Nothing more exciting happening
-                here in terms of content, but just filling up the space to make
-                it look, at least at first glance, a bit more representative of
-                how this would look in a real-world application.
+              <div className="accordion-body" style={props.myStyle}>
+                TextUtils is compatible for all browsers and it even works seamlessly on samrtphones.  
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="container my-3">
-      <button type="button" className="btn btn-primary" onClick={enableDarkMode}>{myBtnText}</button>
-      </div>
+
     </div>
   );
 }
