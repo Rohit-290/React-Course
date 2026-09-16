@@ -5,7 +5,7 @@ export default function About(props) {
 
   return (
     <div className="container">
-      <h2 className="ab my-3">About Us</h2>  
+      <h2 className="my-3" id="ab">About Us</h2>  
       <div>
         <div className="accordion accordion-flush" id="accordionFlushExample">
           <div className="accordion-item">

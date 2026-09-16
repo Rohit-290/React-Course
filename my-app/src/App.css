@@ -1,19 +1,11 @@
 #bOne{
-    background-color: darkgray;
+    background-color: rgb(201, 253, 172);
     color: black;
     border-radius: 5%;
 }
 
-
-#bTwo{
- background-color: #26413c;
- color: aliceblue;
- border-radius: 5%;
+.nk{
+    text-decoration: none;
+    color: black;
 }
 
-
-#bThree{
- background-color: #720026;
- color: aliceblue;
- border-radius: 5%;
-}
