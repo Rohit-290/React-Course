@@ -33,18 +33,22 @@ const [myStyle, setNewStyle] = useState({
         border: "3px solid white"    
         })
       }
+
+
      
   function toggleMode () {
     if(mode==="light"){
       setMode("dark");
       changeStyle();
       showAlert("Dark mode has been enabled","success");
-      document.body.style.backgroundColor  = "#096e9c";
+      document.body.style.backgroundColor  = "#300e4e";
       document.body.style.color  = "#fbfcfc";
       let fo = document.querySelector("#mybox");
+      if(fo){
       fo.style.backgroundColor = "#9cd6d6";
-      let nk = document.querySelector("#gamma");
-      nk.style.color = "white";
+      }
+      let ne = document.querySelector("#gamma");
+      ne.style.color = "white";
       let et = document.querySelector("#eta");
       et.style.color = "white";
     }else if(mode==="dark"){
@@ -55,9 +59,11 @@ const [myStyle, setNewStyle] = useState({
       document.body.style.backgroundColor  = "#fcfeff";
       document.body.style.color  = "#0a0b0b";
       let fo = document.querySelector("#mybox");
+      if(fo){
       fo.style.backgroundColor = "#e7d3e6";
-         let nk = document.querySelector("#gamma");
-      nk.style.color = "black";
+      }
+      let ne = document.querySelector("#gamma");
+      ne.style.color = "black";
       let et = document.querySelector("#eta");
       et.style.color = "black";
     }

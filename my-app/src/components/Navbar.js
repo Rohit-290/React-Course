@@ -9,12 +9,16 @@ export default function Navbar(props) {
          <Link className="navbar-brand" to="#" >
            {props.title}
          </Link>
-         <Link className="nk" to="/" id="gamma" style={props.myStyle}>
+         <li id="gamma">
+         <Link className="nk" to="/" id="gamma" >
              Home
          </Link>
-         <Link className="nk" to="/about" id="eta" style={props.myStyle}>
+         </li>
+         <li id="eta">
+         <Link className="nk" to="/about" id="eta" >
              About
          </Link> 
+         </li>
           {/* <form className="d-flex" role="search">
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
           <button className="btn btn-primary" type="submit">Search</button>
